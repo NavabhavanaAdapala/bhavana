@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class Calculator {
+    public static void main(String[] args) {
+        try (Scanner n = new Scanner(System.in)) {
+            System.out.print("Enter the marks in English: ");
+            int English = n.nextInt();
+            System.out.print("Enter the marks in Telugu: ");
+            int Telugu = n.nextInt();
+            System.out.print("Enter the marks in Science: ");
+            int Science = n.nextInt();
+            System.out.print("Enter the marks in Social: ");
+            int Social = n.nextInt();
+            System.out.print("Enter the marks in Hindi: ");
+            int Hindi = n.nextInt();
+            int Sum = (English + Telugu + Science + Social + Hindi);
+            System.out.println(Sum);
+            int TotalNoOfSubjects = 5;
+            double Average = Sum/TotalNoOfSubjects;
+            String Grade;
+            if (Average >= 90) {
+                Grade = "A++";
+            } else if (Average >= 80) {
+                Grade = "A+";
+            } else if (Average >= 70) {
+                Grade = "A";
+            } else if (Average >= 60) {
+                Grade = "B";
+            } else {
+                Grade = "C";
+            }
+            System.out.println(Average);
+            System.out.println(Grade);
+        }      
+    }
+}
